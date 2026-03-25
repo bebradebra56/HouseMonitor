@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/house_monitor_graph"
+    app:startDestination="@id/houseMonitorLoadFragment">
+
+    <fragment
+        android:id="@+id/houseMonitorLoadFragment"
+        android:name="com.housemo.monisto.efr.presentation.ui.load.HouseMonitorLoadFragment"
+        android:label="HouseMonitorLoadFragment" >
+        <action
+            android:id="@+id/action_houseMonitorLoadFragment_to_houseMonitorV"
+            app:destination="@id/houseMonitorV"
+            app:popUpTo="@id/house_monitor_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/houseMonitorV"
+        android:name="com.housemo.monisto.efr.presentation.ui.view.HouseMonitorV"
+        android:label="HouseMonitorV" />
+</navigation>

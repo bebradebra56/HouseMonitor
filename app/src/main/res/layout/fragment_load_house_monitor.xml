@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/houseMonitorBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/house_monitor_portain_back" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/houseMonitorLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="houseMonitorProgress, houseMonitorProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/houseMonitorStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="houseMonitorConnectionState" />
+
+    <ImageView
+        android:id="@+id/houseMonitorProgressText"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/houseMonitorProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/house_monitor_loadi" />
+
+    <ProgressBar
+        android:id="@+id/houseMonitorProgress"
+        android:layout_width="141dp"
+        android:layout_height="152dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+
+    <ImageView
+        android:id="@+id/houseMonitorConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39"
+        app:srcCompat="@drawable/house_monitor_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/houseMonitorNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="houseMonitorNotifText,houseMonitorGrandButton,houseMonitorSkipButton,houseMonitorNotifText2,houseMonitorNotiBack,houseMonitorLogo" />
+
+    <ImageView
+        android:id="@+id/houseMonitorNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/houseMonitorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/house_monitor_portain" />
+
+    <ImageView
+        android:id="@+id/houseMonitorLogo"
+        android:layout_width="0dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/houseMonitorNotifText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002"
+        app:srcCompat="@drawable/house_monitor_logo" />
+
+    <TextView
+        android:id="@+id/houseMonitorNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/houseMonitorNotifText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/houseMonitorGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/house_monitor_btn"
+        android:fontFamily="@font/inter_bold"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/houseMonitorSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/houseMonitorNotifText"
+        app:layout_constraintStart_toStartOf="@+id/houseMonitorNotifText" />
+
+    <Button
+        android:id="@+id/houseMonitorSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/house_monitor_ski"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/houseMonitorGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/houseMonitorGrandButton" />
+
+
+    <TextView
+        android:id="@+id/houseMonitorNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#BEFFFFFF"
+
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/houseMonitorGrandButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

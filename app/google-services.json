@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "418296616432",
+    "project_id": "housemonitor-f7fa2",
+    "storage_bucket": "housemonitor-f7fa2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418296616432:android:9087d8f11803c852d27935",
+        "android_client_info": {
+          "package_name": "com.housemo.monisto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4x-Aor6k1Qwtom-ZhtJq5a4hHhEeqnZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
